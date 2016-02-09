@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+
+        /**
+         * You must include the dependency on 'ngMaterial'
+         */
+
+        var app = angular.module('CVApp', ['ngMaterial']);
+        app.controller("appController", function($scope) {
+            $scope.presentation = "Consultante freelance";
+            $scope.name = "Nadège Rouelle";
+            $scope.competences = [
+            { "name": "C#" },
+            { "name": "ASP.Net MVC" }, 
+            { "name": "Windows Phone" }, 
+            { "name": "SharePoint" }
+            ];
+        })
+    </script>
+    <div ng-app="CVApp">
+        <div ng-controller="appController">
+            <div ng-cloak>
+                <md-content>
+                    <md-tabs md-dynamic-height md-border-bottom>
+                        <md-tab label="Accueil">
+                            <md-content class="md-padding">
+                                <md-card>
+                                    <md-card-title>
+                                        <md-card-title-text>
+                                            <span class="md-headline">{{name}}</span>
+                                            <span class="md-subhead">{{presentation}}</span>
+                                        </md-card-title-text>
+                                        <md-card-title-media>
+                                            <div class="md-media-lg card-media"></div>
+                                        </md-card-title-media>
+                                    </md-card-title>
+                                </md-card>
+                            </md-content>
+                        </md-tab>
+                        <md-tab label="Compétences">
+                            <md-content class="md-padding" layout-xs="column" layout="row">
+                                <div layout="row" layout-wrap>
+                                <md-card ng-repeat="competence in competences" flex="29">
+                                    <md-card-title>
+                                        <md-card-title-text>
+                                            <span class="md-headline">{{competence.name}}</span>
+                                            <span class="md-subhead">{{presentation}}</span>
+                                        </md-card-title-text>
+                                        <md-card-title-media>
+                                            <div class="md-media-lg card-media"></div>
+                                        </md-card-title-media>
+                                    </md-card-title>
+                                </md-card>
+                                    </div>
+                            </md-content>
+                            
+                        </md-tab>
+                        <md-tab label="Contact">
+                            <md-content class="md-padding">
+                                <h1 class="md-display-2">Tab Three</h1>
+                                <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+                            </md-content>
+                        </md-tab>
+                    </md-tabs>
+                </md-content>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
