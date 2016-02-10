@@ -22,27 +22,44 @@
               .primaryPalette('blue')
               .accentPalette('indigo');
         });
-        app.controller("appController", function($scope) {
+        app.controller("appController", function ($scope) {
             $scope.presentation = "Consultante freelance";
             $scope.name = "Nadège Rouelle";
             $scope.competences = [
             { "name": "C#" },
-            { "name": "ASP.Net MVC" }, 
-            { "name": "WPF" }, 
-            { "name": "Xaml" }, 
-            { "name": "MVC" }, 
-            { "name": "MVVM" }, 
-            { "name": "Windows Phone" }, 
+            { "name": "ASP.Net MVC" },
+            { "name": "WPF" },
+            { "name": "Xaml" },
+            { "name": "MVC" },
+            { "name": "MVVM" },
+            { "name": "Windows Phone" },
             { "name": "Pratiques Agiles" },
             { "name": "TDD" },
             { "name": "Pair Programming" }
             ];
             $scope.experiences = [
-            { "name": "ERDF - Projet Linky", "description": "Développement d'une bibliothèque de communication avec les compteurs Linky.", "periode" : "Depuis Février 2015", "methode": "Développement en mode Agile, TDD", "environnement": "Windows 8, Visual Studio 2013, Resharper, C#, .Net 4.5, Xaml, WPF, NFluent, NCrunch, Moq, NUnit" },
-            { "name": "Groupe Carrefour, Lyon", "description": "Maintenance et évolution de l’application Apoline, outil d'aide à la réalisation de catalogues promotionnels.", "periode": "Septembre 2014 à Janvier 2015" },
-            { "name": "Volvo IT", "description": "Migration de SharePoint 2007 vers SharePoint 2010.", "periode": "Depuis FévrierDepuis Février 2015" },
-            { "name": "April Assurances", "description": "Mise à jour de workflow sur Sharepoint 2007.", "periode": "Depuis Février 2015" },
-            { "name": "Stanley - ex ADT France", "description": "Développement d'une application de gestion des commissions pour les chargés d'affaires.", "periode": "Depuis Février 2015" }
+            { "name": "ERDF - Projet Linky, Lyon", "description": "Développement d'une bibliothèque de communication avec les compteurs Linky.", "periode": "Depuis Février 2015", "methode": "Développement en mode Agile, TDD", "environnement": "Windows 8, Visual Studio 2013, Resharper, C#, .Net 4.5, Xaml, WPF, NFluent, NCrunch, Moq, NUnit, Git" },
+            { "name": "Groupe Carrefour, Lyon", "description": "Maintenance et évolution de l’application Apoline, outil d'aide à la réalisation de catalogues promotionnels.", "periode": "Septembre 2014 à Janvier 2015", "methode": "Pratiques agiles", "environnement": "C#, .Net 4.5, ASP.Net MVC, Moq, Oracle, Visual Studio 2012, TFS" },
+            { "name": "Schneider Electrics, Grenoble", "description": "Application de helpdesk : Maintenance de l'outil de gestion des demandes de support.", "periode": "Décembre 2013", "environnement": "SharePoint 2010, C#, .Net 3.5" },
+            { "name": "Groupe Carrefour, Lyon", "description": "Audit technique de l’application TMS et rédaction de recommandations pour améliorer les performances.", "periode": "Novembre 2013", "methode": "Pratiques agiles", "environnement": "Visual Studio 2008, ASP.Net 3.5, C#, .Net 3.5, Oracle 10G" },
+            { "name": "ERDF, Lyon", "description": "EPM 2010 : Projet pilote de déploiement de Project Server au sein de la DSI Linky lyonnaise.", "periode": "Mars à Octobre 2013", "methode": "Pratiques agiles", "environnement": "SharePoint 2010, Project Server 2010" },
+            { "name": "Sanofi, Lyon", "description": "Configuration d’une plateforme de déploiement continu.", "periode": "Février à Mars 2013", "environnement": "ASP.Net 3.5, Cruise Control" },
+            { "name": "CG 38, Grenoble", "description": "Accompagnement à la mise en place d’un Intranet et formation des utilisateurs.", "periode": "Janvier 2013", "environnement": "SharePoint 2010, SharePoint 2013" },
+            { "name": "Sanofi, Lyon", "description": "PHD : Audit d’une application Web.", "periode": "Novembre à Décembre 2012", "environnement": "C#, ASP.Net 3.5, Visual Studio 2010, NDepend" },
+            { "name": "Ville de Grenoble, Grenoble", "description": "Mise en place d’un portail collaboratif. Formation des utilisateurs.", "periode": "Octobre 2012", "environnement": "SharePoint 2010" },
+            { "name": "Volvo IT, Vénissieux", "description": "Migration de Teamplace de SharePoint 2007 vers SharePoint 2010.", "periode": "Novembre 2011 à Septembre 2012", "environnement": "Sharepoint 2007, Sharepoint 2010, C#, PowerShell, TFS" },
+            { "name": "Servair, Paris", "description": "Développement d’un portail de gestion des commandes pour les compagnies aériennes.", "periode": "Mai à Juillet 2011", "methode": "Télétravail, Pratiques agiles", "environnement": " Sharepoint 2010, C#, PowerShell, Entity Framework, TFS" },
+            { "name": "April Technologies, Lyon", "description": "Mise à jour de workflows dans SharePoint.", "periode": "Mai 2011", "environnement": "SharePoint 2007, SQL Server, Visual Studio 2007, InfoPath, Workflow Foundation" },
+            { "name": "Groupe Seb, Lyon", "description": "Création d’un portail de gestion du service après-vente.", "periode": "Janvier à Avril 2011", "environnement": "SharePoint 2010, Visual Studio 2010, C#, Entity Framework" },
+            { "name": "Volvo IT, Vénissieux", "description": "Etude de la migration de SharePoint 2007 vers SharePoint 2010.", "periode": "Juin à Décembre 2010", "environnement": "SharePoint 2010, SharePoint 2007, C#, PowerShell" },
+            { "name": "April Technologies, Lyon", "description": "Evolution de l'outil de gestion des apporteurs d'affaires.", "periode": "Juin 2010", "environnement": "SharePoint 2007, Visual Studio 2007, InfoPath, Workflow Foundation" },
+            { "name": "ADT France, Francheville", "description": "Développement d'une application de gestion de la facturation des commerciaux.", "periode": "Mars 2009 à Mai 2010", "environnement": "Visual Studio 2008, ASP.Net 3.5, C#, Linq, Entity Framework, SQL Server, TFS" },
+            { "name": "Groupe Casino, Saint Etienne", "description": "Portail Innovation : Mise en place d'un portail de recueil d'idées pour les salariés du groupe.", "periode": "Septembre 2008 à Janvier 2009", "environnement": "SharePoint 2007, Visual Studio 2008, C#, PowerShell, SVN" },
+            { "name": "April Technologies, Lyon", "description": "Evolution de l'outil de gestion des apporteurs d'affaires.", "periode": "Septembre 2008", "environnement": "SharePoint 2007, Visual Studio 2007, InfoPath, Workflow Foundation" },
+            { "name": "France Telecom, Lyon", "description": "Mise en place d’un portail d'aide à la décision pour les dirigeants.", "periode": "Janvier à Septembre 2008", "environnement": "SharePoint 2007, Visual Studio 2007, C#, Reporting Services" },
+            { "name": "Bureau Veritas, Lyon", "description": "Installation des outils de Business Intelligence." },
+            { "name": "Conseil Régional Rhône Alpes, Charbonnières les Bains", "description": "Développement d’une application de gestion de la formation continue.", "periode": "Déc. 2006 à Décembre 2007", "environnement": "ASP.Net, Visual Studio 2005, C#, Reporting Services, Oracle 10G" },
+            { "name": "SNCF, Lyon", "description": "Développement d’une application de gestion des indicateurs qualité.", "periode": "Déc. 2006 à Décembre 2007", "environnement": "ASP.Net, Visual Studio 2003, C#, SQL Server" }
             ];
         })
     </script>
@@ -107,8 +124,20 @@
                         </md-tab>
                         <md-tab label="Contact">
                             <md-content class="md-padding">
-                                <h1 class="md-display-2">Tab Three</h1>
-                                <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+                                <h1 class="md-display-2">Nadège Rouelle</h1>
+                                <p>
+                                    <span class="md-body-2">Rouelle Consulting (en cours d'immatriculation)</span><br />
+                                    <span class="md-body-2">
+                                        21 Rue du Docteur Rollet
+                                    </span><br />
+                                    <span class="md-body-2">
+                                        69100 Villeurbanne
+                                    </span><br />
+                                    <span class="md-body-2">
+                                        Mobile : 06.88.34.60.92
+                                    </span><br />
+                                    <span class="md-body-2">Mail : nrouelle@outlook.fr</span>
+                                </p>
                             </md-content>
                         </md-tab>
                     </md-tabs>
