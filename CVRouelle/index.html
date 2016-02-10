@@ -17,15 +17,32 @@
          * You must include the dependency on 'ngMaterial'
          */
 
-        var app = angular.module('CVApp', ['ngMaterial']);
+        var app = angular.module('CVApp', ['ngMaterial']).config(function ($mdThemingProvider) {
+            $mdThemingProvider.theme('default')
+              .primaryPalette('blue')
+              .accentPalette('indigo');
+        });
         app.controller("appController", function($scope) {
             $scope.presentation = "Consultante freelance";
             $scope.name = "Nadège Rouelle";
             $scope.competences = [
             { "name": "C#" },
             { "name": "ASP.Net MVC" }, 
+            { "name": "WPF" }, 
+            { "name": "Xaml" }, 
+            { "name": "MVC" }, 
+            { "name": "MVVM" }, 
             { "name": "Windows Phone" }, 
-            { "name": "SharePoint" }
+            { "name": "Pratiques Agiles" },
+            { "name": "TDD" },
+            { "name": "Pair Programming" }
+            ];
+            $scope.experiences = [
+            { "name": "ERDF - Projet Linky", "description": "Développement d'une bibliothèque de communication avec les compteurs Linky.", "periode" : "Depuis Février 2015", "methode": "Développement en mode Agile, TDD", "environnement": "Windows 8, Visual Studio 2013, Resharper, C#, .Net 4.5, Xaml, WPF, NFluent, NCrunch, Moq, NUnit" },
+            { "name": "Groupe Carrefour, Lyon", "description": "Maintenance et évolution de l’application Apoline, outil d'aide à la réalisation de catalogues promotionnels.", "periode": "Septembre 2014 à Janvier 2015" },
+            { "name": "Volvo IT", "description": "Migration de SharePoint 2007 vers SharePoint 2010.", "periode": "Depuis FévrierDepuis Février 2015" },
+            { "name": "April Assurances", "description": "Mise à jour de workflow sur Sharepoint 2007.", "periode": "Depuis Février 2015" },
+            { "name": "Stanley - ex ADT France", "description": "Développement d'une application de gestion des commissions pour les chargés d'affaires.", "periode": "Depuis Février 2015" }
             ];
         })
     </script>
@@ -39,7 +56,7 @@
                                 <md-card>
                                     <md-card-title>
                                         <md-card-title-text>
-                                            <span class="md-headline">{{name}}</span>
+                                            <span class="md-display-1">{{name}}</span>
                                             <span class="md-subhead">{{presentation}}</span>
                                         </md-card-title-text>
                                         <md-card-title-media>
@@ -52,20 +69,41 @@
                         <md-tab label="Compétences">
                             <md-content class="md-padding" layout-xs="column" layout="row">
                                 <div layout="row" layout-wrap>
-                                <md-card ng-repeat="competence in competences" flex="29">
-                                    <md-card-title>
-                                        <md-card-title-text>
-                                            <span class="md-headline">{{competence.name}}</span>
-                                            <span class="md-subhead">{{presentation}}</span>
-                                        </md-card-title-text>
-                                        <md-card-title-media>
-                                            <div class="md-media-lg card-media"></div>
-                                        </md-card-title-media>
-                                    </md-card-title>
-                                </md-card>
-                                    </div>
+                                    <md-card ng-repeat="competence in competences" flex="29">
+                                        <md-card-title>
+                                            <md-card-title-text>
+                                                <span class="md-headline">{{competence.name}}</span>
+                                                <span class="md-subhead">{{presentation}}</span>
+                                            </md-card-title-text>
+                                            <md-card-title-media>
+                                                <div class="md-media-lg card-media"></div>
+                                            </md-card-title-media>
+                                        </md-card-title>
+                                    </md-card>
+                                </div>
                             </md-content>
-                            
+                        </md-tab>
+                        <md-tab label="Expériences">
+                            <md-content class="md-padding" layout-xs="column" layout="row">
+                                <div layout="row" layout-wrap>
+                                    <md-card ng-repeat="experience in experiences" flex="30">
+                                        <md-card-title>
+                                            <md-card-title-text>
+                                                <span class="md-display-1">{{experience.name}}</span>
+                                                <span class="md-subhead">{{experience.periode}}</span>
+                                                <span class="md-body-1" style="margin: 5px 0;">{{experience.description}}</span>
+                                                <span class="md-body-2" style="margin-bottom: 4px;">Méthodes :</span>
+                                                <span class="md-body-1">{{experience.methode}}</span>
+                                                <span class="md-body-2" style="margin-bottom: 4px;">Environnement :</span>
+                                                <span class="md-body-1">{{experience.environnement}}</span>
+                                            </md-card-title-text>
+                                            <md-card-title-media>
+                                                <div class="md-media-lg card-media"></div>
+                                            </md-card-title-media>
+                                        </md-card-title>
+                                    </md-card>
+                                </div>
+                            </md-content>
                         </md-tab>
                         <md-tab label="Contact">
                             <md-content class="md-padding">
