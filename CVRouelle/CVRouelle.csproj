@@ -105,7 +105,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\PublishProfiles\rouelle.pubxml" />
+    <Content Include="assets\CV Nadège Rouelle.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\rouelle - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\rouelle - Web Deploy.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
