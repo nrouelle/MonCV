@@ -44,12 +44,12 @@
             { "name": "MVVM" },
             { "name": "Windows Phone" },
             { "name": "Pratiques Agiles" },
-            { "name": "TDD" },
+            { "name": "TDD / BDD / DDD" },
             { "name": "Pair Programming" }
             ];
 
             $scope.experiences = [
-            { "name": "ERDF - Projet Linky, Lyon", "description": "Développement d'une bibliothèque de communication avec les compteurs Linky.", "periode": "Depuis Février 2015", "methode": "Développement en mode Agile, TDD", "environnement": "Windows 8, Visual Studio 2013, Resharper, C#, .Net 4.5, Xaml, WPF, NFluent, NCrunch, Moq, NUnit, Git" },
+            { "name": "ERDF - Projet Linky, Lyon", "description": "Développement d'une bibliothèque de communication avec les compteurs Linky.", "periode": "Depuis Février 2015", "methode": "Développement en mode Agile, TDD, BDD", "environnement": "Windows 8, Visual Studio 2013, Resharper, C#, .Net 4.5, Xaml, WPF, NFluent, NCrunch, Moq, NUnit, Git" },
             { "name": "Groupe Carrefour, Lyon", "description": "Maintenance et évolution de l’application Apoline, outil d'aide à la réalisation de catalogues promotionnels.", "periode": "Septembre 2014 à Janvier 2015", "methode": "Pratiques agiles", "environnement": "C#, .Net 4.5, ASP.Net MVC, Moq, Oracle, Visual Studio 2012, TFS" },
             { "name": "Schneider Electrics, Grenoble", "description": "Application de helpdesk : Maintenance de l'outil de gestion des demandes de support.", "periode": "Décembre 2013", "environnement": "SharePoint 2010, C#, .Net 3.5" },
             { "name": "Groupe Carrefour, Lyon", "description": "Audit technique de l’application TMS et rédaction de recommandations pour améliorer les performances.", "periode": "Novembre 2013", "methode": "Pratiques agiles", "environnement": "Visual Studio 2008, ASP.Net 3.5, C#, .Net 3.5, Oracle 10G" },
@@ -97,11 +97,11 @@
         </nav>
         <footer>
             <ul class="icons">
+                <li><a href="./assets/pdf/CV Nadège Rouelle.pdf" class="icon fa-file-pdf-o"><span class="label">Mon CV</span></a></li>
                 <li><a href="https://twitter.com/nadegerouelle" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
                 <!--<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
                 <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>-->
                 <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-                <li><a href="./assets/pdf/CV Nadège Rouelle.pdf" class="icon fa-file-pdf-o"><span class="label">Mon CV</span></a></li>
                 <li><a href="mailto:nrouelle@outlook.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
             </ul>
         </footer>
@@ -129,7 +129,6 @@
                 <div class="container">
                     <h3>Mes compétences</h3>
                     <p>J'interviens aussi bien dans le développement d'applications Web que mobiles.</p>
-
                     <ul class="feature-icons">
                         <li class="fa-users" ng-repeat="competence in competences">{{competence.name}}</li>
                     </ul>
@@ -140,7 +139,7 @@
             <section id="three">
                 <div class="container">
                     <h3>Mes expériences</h3>
-                    <p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+                    <!--<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>-->
                     <div class="features">
                         <article ng-repeat="experience in experiences">
                             <a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
@@ -164,7 +163,6 @@
                         Rouelle Consulting</br>
                         21 Rue du Docteur Rollet</br>
                         69100 Villeurbanne</br>
-                        Mobile : 06.88.34.60.92</br>
                         Mail : nrouelle[at]outlook[point]fr
                     </p>
                 </div>
