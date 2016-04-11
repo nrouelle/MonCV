@@ -109,6 +109,7 @@
     <Content Include="assets\js\util.js" />
     <Content Include="images\avatar.jpg" />
     <Content Include="images\banner.jpg" />
+    <Content Include="images\lasaone.jpg" />
     <Content Include="images\pic01.jpg" />
     <Content Include="images\pic02.jpg" />
     <Content Include="images\pic03.jpg" />
