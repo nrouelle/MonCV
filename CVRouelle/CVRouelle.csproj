@@ -107,6 +107,7 @@
     <Content Include="assets\js\main.js" />
     <Content Include="assets\js\skel.min.js" />
     <Content Include="assets\js\util.js" />
+    <Content Include="assets\pdf\Nadège_Rouelle_2017.pdf" />
     <Content Include="images\avatar.jpg" />
     <Content Include="images\banner.jpg" />
     <Content Include="images\lasaone.jpg" />
@@ -135,7 +136,6 @@
     <Content Include="assets\sass\libs\_skel.scss" />
     <Content Include="assets\sass\libs\_vars.scss" />
     <Content Include="assets\sass\main.scss" />
-    <Content Include="assets\pdf\CV Nadège Rouelle.pdf" />
     <None Include="Properties\PublishProfiles\rouelle.pubxml" />
   </ItemGroup>
   <PropertyGroup>
@@ -149,7 +149,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>12288</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
